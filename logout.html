@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>mikrotik hotspot > logout</title>
+ <!--<![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title></title>
+<meta name="description" content="Simple Responsive Template is a template for responsive web design. Mobile first, responsive grid layout, toggle menu, navigation bar with unlimited drop downs, responsive slideshow">
+<meta name="keywords" content="">
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+
+<!-- CSS-->
+<!-- Google web fonts. You can get your own bundle at http://www.google.com/fonts. Don't forget to update the CSS accordingly!-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="js/flexslider/flexslider.css">
+<link rel="stylesheet" href="css/basic-style.css">
+
+<!-- end CSS-->
+    
+<!-- JS-->
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+<!-- end JS-->
+
+
+<!-- columns demo style. DELETE IT! -->
+<style type="text/css">
+<!--
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<style type="text/css">
+<!--
+textarea,input,select {
+	background-color: #FDFBFB;
+	border: 1px #BBBBBB solid;
+	padding: 2px;
+	margin: 1px;
+	font-size: 14px;
+	color: #808080;
+}
+
+.tabula{
+ 
+border-width: 1px; 
+border-collapse: collapse; 
+border-color: #c1c1c1; 
+background-color: transparent;
+font-family: verdana;
+font-size: 11px;
+}
+
+body{ color: #737373; font-size: 12px; font-family: verdana; }
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 12px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 12px; padding: 4px;}
+
+-->
+</style>
+</head>
+
+<body>
+	<header class="wrapper clearfix">
+               
+        <div id="banner">        
+            <div id="logo"><a href="welcome.html"><img src="images/logo.png" alt="logo"></a></div> 
+        </div>
+        
+        <!-- main navigation -->
+        <nav id="topnav" >
+          
+          <ul class="srt-menu" id="menu-main-navigation">
+              
+              
+             
+              
+             
+                  
+              </li>
+              
+              
+          </ul>   
+        </nav><!-- end main navigation -->
+  
+    </header>
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    font-size: 16px;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #0099ff;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.block:hover {
+    background-color: #ddd;
+    color: black;
+}
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+     padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-left:10px;/* Add some space below the input */
+}
+</style>
+<table >
+
+<tr>
+<td >
+<b>you have just logged out</b> <br><br>
+<table >  
+	<thead><b><center>YOUR SESSION HISTORY</center></b></thead>
+<tr><td >user name</td><td>$(username)</td></tr>
+<tr><td >IP address</td><td>$(ip)</td></tr>
+<tr><td >MAC address</td><td>$(mac)</td></tr>
+<tr><td >session time</td><td>$(uptime)</td></tr>
+$(if session-time-left)
+<tr><td >time left</td><td>$(session-time-left)</td></tr>
+$(endif)
+<tr><td >bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+</table>
+<br>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+<input type="submit" class="block" value="log in">
+</form>
+</td>
+</table>
+</body>
+</html>

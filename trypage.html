@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script>   
+   $(document).ready(function() {
+    $("#show_menu").click(function () {
+      $( ".list_container" ).show(30);
+    });  
+    $("#hide_menu").click(function () {
+      $( ".list_container" ).hide(30);
+    }); 
+  });
+</script>
+</head>
+<body>
+<div class="list_container" style="display:none">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Tutorials</a></li>
+<li><a href="#">Project</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<input type="button" class="btn btn-primary" id="show_menu" value="Show Menu">
+<input type="button" class="btn btn-primary" id="hide_menu" value="Hide Menu">
+</body>
+</html>
